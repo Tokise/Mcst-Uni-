@@ -1,4 +1,5 @@
 import "../styles/Home.css";
+import Drone from "../assets/images/mcst-drone.png";
 
 export default function HeroSection() {
   return (
@@ -16,7 +17,7 @@ export default function HeroSection() {
           <button className="hero-btn">Explore Programs →</button>
         </div>
         <div className="hero-image">
-          <img src="src/assets/images/mcst-drone.png" alt="Campus" />
+          <img src={Drone} alt="Campus" />
         </div>
       </div>
     </section>

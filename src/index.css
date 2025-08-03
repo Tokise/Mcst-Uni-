@@ -225,7 +225,7 @@ ul {
   text-align: left;
 }
 
-/* Add spacing between address and contact in the footer */
+
 .footer-address {
   margin-bottom: 12px;
 }
@@ -233,7 +233,7 @@ ul {
 .footer-logo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start */
+  align-items: flex-start; 
 }
 
 .footer-logo img {
@@ -268,7 +268,7 @@ ul {
   color: #fff;
 }
 .footer-column a:hover {
-  color: #f8c102; /* Highlight color on hover */
+  color: #f8c102; 
 }
 
 .footer-column {
@@ -358,26 +358,25 @@ ul {
 .navbar-links li {
   width: 100%;
   text-align: left;
-  padding: 15px 20px 20px; /* indent the links */
+  padding: 15px 20px 20px; 
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
-  top: 1px; /* slight indent for dropdowns */
+  top: 1px; 
 }
 
 .navbar-links li:last-child {
   border-bottom: none;
 }
 
-/* Main dropdown span */
 .navbar-links li span {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* text stays left */
+  justify-content: flex-start; 
   gap: 2px;
   position: relative;
 }
 
-/* Caret on the right */
+
 .dropdown-caret {
   margin-left: auto;
   position: absolute;

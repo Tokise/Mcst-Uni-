@@ -90,6 +90,11 @@ ul {
   cursor: pointer;
 }
 
+/* Highlight active nav link */
+.navbar-links > li > a.active,
+.navbar-links > li > span.active {
+  color: #f8c102 !important;
+}
 .navbar-links > li > a:hover,
 .navbar-links > li > span:hover {
   color: #f8c102;
@@ -98,6 +103,8 @@ ul {
 .menu-toggle {
   display: none; 
 }
+
+
 
 /* Dropdown Menu Desktop */
 .navbar-links .dropdown-menu {
@@ -131,6 +138,10 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
+/* Highlight active dropdown link */
+.navbar-links .dropdown-menu .dropdown-link.active {
+  color: #f8c102 !important;
+}
 .navbar-links .dropdown-menu .dropdown-link:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

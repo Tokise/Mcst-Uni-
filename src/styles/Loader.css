@@ -1,0 +1,54 @@
+@media (max-width: 800px) {
+  .loader-logo {
+    width: 70px;
+    height: 70px;
+  }
+  .loader-bg {
+    padding: 0;
+  }
+}
+.loader-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #064892;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+
+  .loader-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    animation: loaderPop 1.2s cubic-bezier(0.22, 1, 0.36, 1), loaderBounceSmooth 1.4s 1.2s infinite cubic-bezier(0.45,0,0.55,1);
+  }
+
+@keyframes loaderBounceSmooth {
+  0%, 100% { transform: translateY(0); }
+  10% { transform: translateY(-12px); }
+  20% { transform: translateY(-22px); }
+  30% { transform: translateY(-28px); }
+  40% { transform: translateY(-22px); }
+  50% { transform: translateY(-12px); }
+  60% { transform: translateY(0); }
+  70% { transform: translateY(-6px); }
+  80% { transform: translateY(0); }
+}
+
+@keyframes loaderBounce {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-18px); }
+  40% { transform: translateY(0); }
+  60% { transform: translateY(-10px); }
+  80% { transform: translateY(0); }
+}
+
+@keyframes loaderPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}

@@ -446,6 +446,13 @@ ul {
     font-size: 1rem;
     z-index: 1200;
   }
+
+  .theme-toggle span{
+    display: inline-block;
+    height: 25px;
+
+  }
+
   .scroll-to-top {
     right: 16px;
     bottom: 24px;

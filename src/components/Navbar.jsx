@@ -34,7 +34,6 @@ export default function Navbar() {
       if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
         setHidden(true);
       } else {
-     
         setHidden(false);
       }
 
@@ -48,17 +47,32 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${hidden ? "navbar-hidden" : ""}`} ref={navRef}>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); }}>
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={() => {
+            if (window.innerWidth <= 768) setMenuOpen(false);
+          }}
+        >
           <img src={logo} alt="Logo" /> Mandaluyong College of Science and Technology
         </Link>
 
+        {/* Menu Toggle with X transition */}
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          <i className="fas fa-bars"></i>
+          <i className={menuOpen ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
 
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); }}>About</NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => {
+                if (window.innerWidth <= 768) setMenuOpen(false);
+              }}
+            >
+              About
+            </NavLink>
           </li>
 
           <li
@@ -68,15 +82,39 @@ export default function Navbar() {
             <span>
               Admission
               <i
-                className={`fas fa-caret-down dropdown-caret ${openDropdown === 0 ? "rotate" : ""}`}
+                className={`fas fa-caret-down dropdown-caret ${
+                  openDropdown === 0 ? "rotate" : ""
+                }`}
               ></i>
             </span>
             <ul className="dropdown-menu">
               <li>
-                <NavLink to="/admission/program-offerings" className={({ isActive }) => `dropdown-link${isActive ? " active" : ""}`} onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); setOpenDropdown(null); }}>Program Offerings</NavLink>
+                <NavLink
+                  to="/admission/program-offerings"
+                  className={({ isActive }) =>
+                    `dropdown-link${isActive ? " active" : ""}`
+                  }
+                  onClick={() => {
+                    if (window.innerWidth <= 768) setMenuOpen(false);
+                    setOpenDropdown(null);
+                  }}
+                >
+                  Program Offerings
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/admission/info" className={({ isActive }) => `dropdown-link${isActive ? " active" : ""}`} onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); setOpenDropdown(null); }}>Admissions Info</NavLink>
+                <NavLink
+                  to="/admission/info"
+                  className={({ isActive }) =>
+                    `dropdown-link${isActive ? " active" : ""}`
+                  }
+                  onClick={() => {
+                    if (window.innerWidth <= 768) setMenuOpen(false);
+                    setOpenDropdown(null);
+                  }}
+                >
+                  Admissions Info
+                </NavLink>
               </li>
             </ul>
           </li>
@@ -88,7 +126,9 @@ export default function Navbar() {
             <span>
               Resources
               <i
-                className={`fas fa-caret-down dropdown-caret ${openDropdown === 1 ? "rotate" : ""}`}
+                className={`fas fa-caret-down dropdown-caret ${
+                  openDropdown === 1 ? "rotate" : ""
+                }`}
               ></i>
             </span>
             <ul className="dropdown-menu">
@@ -98,7 +138,10 @@ export default function Navbar() {
                   className="dropdown-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); setOpenDropdown(null); }}
+                  onClick={() => {
+                    if (window.innerWidth <= 768) setMenuOpen(false);
+                    setOpenDropdown(null);
+                  }}
                 >
                   Registrar's Office
                 </a>
@@ -109,7 +152,10 @@ export default function Navbar() {
                   className="dropdown-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); setOpenDropdown(null); }}
+                  onClick={() => {
+                    if (window.innerWidth <= 768) setMenuOpen(false);
+                    setOpenDropdown(null);
+                  }}
                 >
                   Learning Resources Center
                 </a>
@@ -118,7 +164,15 @@ export default function Navbar() {
           </li>
 
           <li>
-            <NavLink to="/apply" className={({ isActive }) => isActive ? "active" : ""} onClick={() => { if(window.innerWidth <= 768) setMenuOpen(false); }}>Apply</NavLink>
+            <NavLink
+              to="/apply"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => {
+                if (window.innerWidth <= 768) setMenuOpen(false);
+              }}
+            >
+              Apply
+            </NavLink>
           </li>
         </ul>
       </div>

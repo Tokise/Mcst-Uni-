@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 50px;
+  padding: 50px 60px;
   gap: 50px;
 }
 
@@ -168,6 +168,7 @@
   .about-main-container.reverse {
     flex-direction: column;
     padding: 20px;
+  
   }
  
 

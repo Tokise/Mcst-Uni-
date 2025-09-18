@@ -1,0 +1,22 @@
+{
+  "background_color": "#ffffff",
+  "dir": "auto",
+  "display": "standalone",
+  "name": "mcst-uni.vercel",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "mcst-uni.vercel",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://mcst-uni.vercel.app/mcst-logo.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "https://mcst-uni.vercel.app/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ]
+}
